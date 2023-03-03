@@ -1,0 +1,101 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Neue World Condensed';
+    src: url('./assets/NeueWorldCondensed-regular.woff2') format('woff2'),
+         url('./assets/NeueWorldCondensed-regular.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.slider {
+    background-color: #101010;
+    color: #a89a54;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+}
+
+.slider .item {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+.img-wrapper {
+    left: 30%;
+    position: absolute;
+    top: 25%;
+    transform: rotate(-20deg);
+}
+
+.slider .item .img {
+    height: 600px;
+    position: absolute;
+    width: 400px;
+}
+
+.slider .item .img img {
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    width: 100%;
+}
+
+.slider .item .content {
+    align-items: center;
+    display: flex;
+    font-size: 15rem;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+
+.slider .item .content .wrap {
+    font-family: "Neue World Condensed";
+    letter-spacing: -10px;
+    max-width: 900px;
+    text-align: center;
+}
+
+.slider .item .content .wrap .letter {
+    display: inline-block;
+}
+
+.slider .nav .prev,
+.slider .nav .next {
+    cursor: pointer;
+    height: 2rem;
+    position: absolute;
+    stroke: #a89a54;
+    top: calc(50% - 1rem);
+    width: 2rem;
+    z-index: 3;
+}
+
+.slider .nav .next {
+    right: 4rem;
+    transform: scale(2) rotate(180deg);
+}
+
+.slider .nav .prev {
+    left: 4rem;
+    transform: scale(2);
+}
+
+.slider .item:not(.is-active) {
+    opacity: 0;
+    pointer-events: none;
+}

@@ -1,0 +1,197 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Neue Montreal';
+    src: url('./assets/NeueMontreal-regular.woff2') format('woff2'),
+         url('./assets/NeueMontreal-regular.woff') format('woff');
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Morgenwalsh';
+    src: url('./assets/Morgenwalsh.woff2') format('woff2'),
+         url('./assets/Morgenwalsh.woff') format('woff');
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    background: #e9e1c5;
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+}
+
+.nav-container {
+    position: relative;
+    width: 100%;
+}
+
+.nav {
+    border-bottom: 1px solid #000;
+    display: flex;
+    margin: 0 auto;
+    padding: 2em 0;
+    width: 95%;
+}
+
+.nav-item {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.nav-item:first-child {
+    margin-right: auto;
+    text-align: left;
+}
+
+.nav-item:nth-child(2) {
+    flex: 4;
+}
+
+.nav-item:last-child {
+    margin-left: auto;
+}
+
+.nav-item a {
+    color: #000;
+    font-family: "Neue Montreal", sans-serif;
+    text-decoration: none;
+}
+
+.nav-logo a {
+    font-family: "Morgenwalsh", serif;
+    font-size: 20px;
+}
+
+.nav-cta a {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.nav-links a {
+    font-size: 14px;
+    padding: 0 2em;
+}
+
+@media (max-width: 900px) {
+    .nav {
+        width: 100%;
+    }
+
+    .nav-links,
+    .nav-cta {
+        display: none;
+    }
+}
+
+.hero-container {
+    position: relative;
+    width: 100%;
+    z-index: 10000;
+}
+
+.hero > * {
+    position: relative;
+}
+
+.hero {
+    margin: 0 auto;
+    padding: 4em 0;
+    text-align: center;
+    width: 30%;
+}
+
+h1 {
+    font-family: "Morgenwalsh", serif;
+    font-size: 5vw;
+}
+
+.cta button {
+    background: #000;
+    border: none;
+    color: #fff;
+    font-size: 12px;
+    margin: 4em 0 0 0;
+    outline: none;
+    padding: 1.6em 3.2em;
+    text-transform: uppercase;
+}
+
+p {
+    font-family: "Neue Montreal", sans-serif;
+    font-size: 14px;
+    margin: 4em 0 0 0;
+}
+
+.bg-gradient {
+    filter: blur(10px);
+    left: 50%;
+    position: absolute;
+    top: 30%;
+    transform: translate(-50%,-50%);
+    z-index: 0;
+}
+
+.blob {
+    animation: animate-blob 4s ease-in-out infinite;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes animate-blob {
+    0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+}
+
+.blob-1 {
+    background: url(./img-1.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    height: 400px;
+    left: 5%;
+    position: absolute;
+    top: 20%;
+    width: 400px;
+}
+
+.blob-2 {
+    animation-delay: 1s;
+    background: url(./img-2.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    height: 160px;
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    width: 160px;
+}
+
+
+.blob-3 {
+    animation-delay: 2s;
+    border: 1px solid rgba(0,0,0, 1);
+    height: 100px;
+    position: absolute;
+    right: 25%;
+    top: 20%;
+    width: 100px;
+}
