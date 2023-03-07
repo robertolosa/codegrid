@@ -1,0 +1,99 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Grifinito L';
+    src: url('./assets/GrifinitoL.woff2') format('woff2'),
+         url('./assets/GrifinitoL.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background-color: #101010;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.rolling-text {
+    color: #fff;
+    display: inline-block;
+    font-family: "Grifinito L", sans-serif;
+    font-size: 100px;
+    height: 100px;
+    line-height: 100px;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.rolling-text:hover .letter,
+.rolling-text.play .letter {
+    transform: translateY(-100%);
+}
+
+.rolling-text .block:last-child {
+    color: #c93d4b;
+}
+
+.rolling-text .letter {
+    display: inline-block;
+    transition: transform .6s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.letter:nth-child(1) {
+    transition-delay: 0s;
+}
+
+.letter:nth-child(2) {
+    transition-delay: 0.015s;
+}
+
+.letter:nth-child(3) {
+    transition-delay: 0.03s;
+}
+
+.letter:nth-child(4) {
+    transition-delay: 0.045s;
+}
+
+.letter:nth-child(5) {
+    transition-delay: 0.06s;
+}
+
+.letter:nth-child(6) {
+    transition-delay: 0.075s;
+}
+
+.letter:nth-child(7) {
+    transition-delay: 0.09s;
+}
+
+.letter:nth-child(8) {
+    transition-delay: 0.105s;
+}
+
+.letter:nth-child(9) {
+    transition-delay: 0.12s;
+}
+
+.letter:nth-child(10) {
+    transition-delay: 0.135s;
+}
