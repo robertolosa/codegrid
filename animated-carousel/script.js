@@ -1,4 +1,5 @@
 function init() {
+    const slider = document.querySelector(".slider");
     const prevBtn = document.querySelector(".slider .nav .prev");
     const nextBtn = document.querySelector(".slider .nav .next");
     const items = document.querySelectorAll(".slider .item")
@@ -105,8 +106,14 @@ function init() {
         updateSlider(newIndex);
     }
 
+    //On arrows click
     prevBtn.onclick = prev;
     nextBtn.onclick = next;
+
+    //On slider swipe (desktop and mobile)
+    const hammertime = new Hammer(slider);
+    hammertime.on('swipeleft', next);
+    hammertime.on('swiperight', prev);
 }
 
 document.addEventListener("DOMContentLoaded", init);
