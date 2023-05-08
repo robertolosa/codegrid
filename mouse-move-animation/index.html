@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mouse move animation</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+      <a href="https://codegrid.vercel.app/" class="back" title="Back home">
+        <svg viewBox="0 0 1000 1000" xml:space="preserve"><path d="M10 482.5h910v35H10v-35z"/><path d="M815 447.5 990 500l-175 52.5v-105z"/></svg>BACK
+      </a>
+      <nav id="nav">
+        <a href="#">
+          <span>Oceanic</span>
+          <div class="img-wrapper">
+            <img src="./images/01.jpg" alt="" />
+          </div>
+        </a>
+        <a href="#">
+          <span>Serenity</span>
+          <div class="img-wrapper">
+            <img src="./images/02.jpg" alt="" />
+          </div>
+        </a>
+        <a href="#">
+          <span>Zen</span>
+          <div class="img-wrapper">
+            <img src="./images/03.jpg" alt="" />
+          </div>
+        </a>
+        <a href="#">
+          <span>Ethereal</span>
+          <div class="img-wrapper">
+            <img src="./images/04.jpg" alt="" />
+          </div>
+        </a>
+        <a href="#">
+          <span>Blissful</span>
+          <div class="img-wrapper">
+            <img src="./images/05.jpg" alt="" />
+          </div>
+        </a>
+        <a href="#">
+          <span>Radiant</span>
+          <div class="img-wrapper">
+            <img src="./images/01.jpg" alt="" />
+          </div>
+        </a>
+        <a href="#">
+          <span>Nimbus</span>
+          <div class="img-wrapper">
+            <img src="./images/02.jpg" alt="" />
+          </div>
+        </a>
+        <a href="#">
+          <span>Euphoric</span>
+          <div class="img-wrapper">
+            <img src="./images/03.jpg" alt="" />
+          </div>
+        </a>
+        <a href="#">
+          <span>Arcadian</span>
+          <div class="img-wrapper">
+            <img src="./images/04.jpg" alt="" />
+          </div>
+        </a>
+        <a href="#">
+          <span>Luminous</span>
+          <div class="img-wrapper">
+            <img src="./images/05.jpg" alt="" />
+          </div>
+        </a>
+        <a href="#">
+          <span>Tranquil</span>
+          <div class="img-wrapper">
+            <img src="./images/01.jpg" alt="" />
+          </div>
+        </a>
+        <a href="#">
+          <span>Haven</span>
+          <div class="img-wrapper">
+            <img src="./images/02.jpg" alt="" />
+          </div>
+        </a>
+        <a href="#">
+          <span>Vibrant</span>
+          <div class="img-wrapper">
+            <img src="./images/03.jpg" alt="" />
+          </div>
+        </a>
+        <a href="#">
+          <span>Utopian</span>
+          <div class="img-wrapper">
+            <img src="./images/04.jpg" alt="" />
+          </div>
+        </a>
+        <a href="#">
+          <span>Halcyon</span>
+          <div class="img-wrapper">
+            <img src="./images/05.jpg" alt="" />
+          </div>
+        </a>
+        <a href="#">
+          <span>Dreamy</span>
+          <div class="img-wrapper">
+            <img src="./images/01.jpg" alt="" />
+          </div>
+        </a>
+        <a href="#">
+          <span>Luminous</span>
+          <div class="img-wrapper">
+            <img src="./images/02.jpg" alt="" />
+          </div>
+        </a>
+        <a href="#">
+          <span>Eden</span>
+          <div class="img-wrapper">
+            <img src="./images/03.jpg" alt="" />
+          </div>
+        </a>
+        <a href="#">
+          <span>Felicity</span>
+          <div class="img-wrapper">
+            <img src="./images/04.jpg" alt="" />
+          </div>
+        </a>
+        <a href="#">
+          <span>Aspiring</span>
+          <div class="img-wrapper">
+            <img src="./images/05.jpg" alt="" />
+          </div>
+        </a>
+        <a href="#">
+          <span>Elated</span>
+          <div class="img-wrapper">
+            <img src="./images/01.jpg" alt="" />
+          </div>
+        </a>
+        <a href="#">
+          <span>Nirvana</span>
+          <div class="img-wrapper">
+            <img src="./images/02.jpg" alt="" />
+          </div>
+        </a>
+      </nav>
+      <script>
+        const nav = document.getElementById("nav")
+
+        window.onmousemove = (e) => {
+          const percent = e.clientX / window.innerWidth;
+
+          nav.animate({
+            transform: `translateX(${percent * nav.offsetWidth * -1}px)`
+          }, {
+            fill: "forwards",
+            duration: 4000
+          })
+        }
+      </script>
+    </body>
+</html>
