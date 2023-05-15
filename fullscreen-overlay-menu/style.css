@@ -62,7 +62,7 @@ h1.hero-title {
   z-index: 0;
 }
 
-svg path {
+.overlay svg path {
   fill: var(--overlay-bg);
 }
 
