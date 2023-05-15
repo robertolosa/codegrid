@@ -11,7 +11,7 @@
     <a href="https://codegrid.vercel.app/" class="back" title="Back home">
       <svg viewBox="0 0 1000 1000" xml:space="preserve"><path d="M10 482.5h910v35H10v-35z"/><path d="M815 447.5 990 500l-175 52.5v-105z"/></svg>BACK
     </a>
-    
+
     <h1 class="hero-title">purity of noise</h1>
 
     <!-- toggle btn -->
@@ -87,7 +87,7 @@
   <script>
     // setup
     const tl = gsap.timeline({ paused: true });
-    let path = document.querySelector("path");
+    let path = document.querySelector(".overlay svg path");
     var spanBefore = CSSRulePlugin.getRule("#hamburger span:before");
 
     gsap.set(spanBefore, { background: "#000" });
