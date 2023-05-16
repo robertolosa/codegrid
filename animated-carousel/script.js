@@ -110,6 +110,15 @@ function init() {
     prevBtn.onclick = prev;
     nextBtn.onclick = next;
 
+    //On keyboard's arrows click
+    document.onkeydown = (e) => {
+        if (e.key == "ArrowLeft") {
+            prev();
+        } else if (e.key == "ArrowRight") {
+            next();
+        }
+    }
+
     //On slider swipe (desktop and mobile)
     const hammertime = new Hammer(slider);
     hammertime.on('swipeleft', next);
