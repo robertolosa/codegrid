@@ -1,0 +1,131 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Neue Montreal';
+    src: url('./assets/NeueMontreal-regular.woff2') format('woff2'),
+         url('./assets/NeueMontreal-regular.woff') format('woff');
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Morgenwalsh';
+    src: url('./assets/Morgenwalsh.woff2') format('woff2'),
+         url('./assets/Morgenwalsh.woff') format('woff');
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    align-items: center;
+    background-color: #0e0e0e;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    font-family: "Neue Montreal", sans-serif;
+    overflow: hidden;
+  }
+  
+  .back {
+    align-items: center;
+    color: #fff;
+    display: flex;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    left: 15px;
+    line-height: 1;
+    position: absolute;
+    text-decoration: none;
+    top: 5px;
+    z-index: 5;
+  }
+  
+  .back svg {
+    flex-shrink: 0;
+    height: 50px;
+    margin-right: 15px;
+    transform: rotate(-180deg);
+    width: 50px;
+  }
+
+  .back svg path {
+    fill: #fff;
+  }
+  
+  nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  nav a {
+    color: #fff;
+    font-size: 16px;
+    padding: 2em;
+    text-decoration: none;
+  }
+
+  #showreel {
+    bottom: 0;
+    color: #fff;
+    font-size: 16px;
+    padding: 2em 1em;
+    position: absolute;
+    right: 0;
+    text-decoration: none;
+  }
+
+  .slider {
+    cursor: grab;
+    width: 100%;
+  }
+
+  .slider-wrapper {
+    white-space: nowrap;
+  }
+
+  .slider-item {
+    display: inline-block;
+    padding: 3vw;
+    width: 40vw;
+  }
+
+  .slider-item figure {
+    overflow: hidden;
+    padding-bottom: 50%;
+    position: relative;
+  }
+
+  .slider-item figure img {
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+  }
+
+  .slider-progress {
+    background: rgba(255,255,255,.1);
+    bottom: 0;
+    height: 2px;
+    left: 0;
+    margin: 2em;
+    position: fixed;
+    width: 20vw;
+  }
+
+  .slider-progress-bar {
+    background: rgba(255,255,255,.8);
+    height: 100%;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: 0 0;
+    width: 100%;
+  }
