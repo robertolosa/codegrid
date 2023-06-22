@@ -1,0 +1,33 @@
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Generate output
+dist
+
+# Cache directory
+.cache
+.temp
+
+# Optional npm cache directory
+.npm
+
+### Node ###
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Optional eslint cache
+.eslintcache
+
+# Dependency directories
+node_modules/
+
+# dotenv environment variables file
+.env
+.env.test

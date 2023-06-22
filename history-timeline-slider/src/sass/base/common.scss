@@ -1,0 +1,18 @@
+body {
+  background-color: var(--color-theme);
+  color: var(--color-theme-inverse);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+
+  @include respond-min(1710px) {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}

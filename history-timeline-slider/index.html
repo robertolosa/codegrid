@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>History timeline slider</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=1" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=1" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=1" />
+    <link rel="manifest" href="site.webmanifest.json?v=1" />
+    <link rel="mask-icon" href="safari-pinned-tab.svg?v=1" color="#000000" />
+    <link rel="shortcut icon" href="favicon.ico?v=1" />
+    <meta name="msapplication-TileColor" content="#000000" />
+    <meta name="theme-color" content="#000000" />
+    <!-- <style>
+      @Html.Raw(Support.GetCssContent("/dist/critical.css"));
+    </style> -->
+    <link rel="stylesheet" href="dist/main.css" />
+    <script src="dist/main.js" defer></script>
+  </head>
+  <body data-controller="main page-home">
+    <div class="scroller" data-scroll-container data-controller="scroller">
+      <div class="topbar">
+        <a href="/" class="topbar__back" title="Back">Back</a>
+        <a href="https://robylosa.dev" class="topbar__avatar" title="Home">
+          <img src="images/avatar.jpg" alt="Roberto Losa" width="56" height="56" />
+        </a>
+      </div>
+      <main>
+        <section class="history" data-controller="history">
+          <div class="milestones">
+            <div class="container">
+              <div class="swiper" data-history-target="sliderMilestones">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="milestone">
+                      <div class="milestone__caption">
+                        <strong class="milestone__title">The standard Lorem Ipsum</strong>
+                        <p class="milestone__description">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                          laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <span class="milestone__year"><span>1988</span></span>
+                      </div>
+                      <div class="milestone__image">
+                        <img src="images/1988.jpg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="milestone">
+                      <div class="milestone__caption">
+                        <strong class="milestone__title">The standard Lorem Ipsum</strong>
+                        <p class="milestone__description">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                          laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <span class="milestone__year"><span>1990</span></span>
+                      </div>
+                      <div class="milestone__image">
+                        <img src="images/1990.jpg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="milestone">
+                      <div class="milestone__caption">
+                        <strong class="milestone__title">The standard Lorem Ipsum</strong>
+                        <p class="milestone__description">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                          laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <span class="milestone__year"><span>1995</span></span>
+                      </div>
+                      <div class="milestone__image">
+                        <img src="images/1995.jpg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="milestone">
+                      <div class="milestone__caption">
+                        <strong class="milestone__title">The standard Lorem Ipsum</strong>
+                        <p class="milestone__description">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                          laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <span class="milestone__year"><span>1996</span></span>
+                      </div>
+                      <div class="milestone__image">
+                        <img src="images/1996.jpg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="milestone">
+                      <div class="milestone__caption">
+                        <strong class="milestone__title">The standard Lorem Ipsum</strong>
+                        <p class="milestone__description">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                          laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <span class="milestone__year"><span>1999</span></span>
+                      </div>
+                      <div class="milestone__image">
+                        <img src="images/1999.jpg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="milestone">
+                      <div class="milestone__caption">
+                        <strong class="milestone__title">The standard Lorem Ipsum</strong>
+                        <p class="milestone__description">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                          laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <span class="milestone__year"><span>2010</span></span>
+                      </div>
+                      <div class="milestone__image">
+                        <img src="images/2010.jpg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="milestone">
+                      <div class="milestone__caption">
+                        <strong class="milestone__title">The standard Lorem Ipsum</strong>
+                        <p class="milestone__description">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                          laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <span class="milestone__year"><span>2015</span></span>
+                      </div>
+                      <div class="milestone__image">
+                        <img src="images/2015.jpg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="milestone">
+                      <div class="milestone__caption">
+                        <strong class="milestone__title">The standard Lorem Ipsum</strong>
+                        <p class="milestone__description">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                          laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <span class="milestone__year"><span>2018</span></span>
+                      </div>
+                      <div class="milestone__image">
+                        <img src="images/2018.jpg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="milestone">
+                      <div class="milestone__caption">
+                        <strong class="milestone__title">The standard Lorem Ipsum</strong>
+                        <p class="milestone__description">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                          laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <span class="milestone__year"><span>2019</span></span>
+                      </div>
+                      <div class="milestone__image">
+                        <img src="images/2019.jpg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="milestone">
+                      <div class="milestone__caption">
+                        <strong class="milestone__title">The standard Lorem Ipsum</strong>
+                        <p class="milestone__description">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                          laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <span class="milestone__year"><span>2020</span></span>
+                      </div>
+                      <div class="milestone__image">
+                        <img src="images/2020.jpg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="milestone">
+                      <div class="milestone__caption">
+                        <strong class="milestone__title">The standard Lorem Ipsum</strong>
+                        <p class="milestone__description">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                          laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <span class="milestone__year"><span>2021</span></span>
+                      </div>
+                      <div class="milestone__image">
+                        <img src="images/2021.jpg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slider__controls">
+                  <button type="button" class="slider__controls__button slider__controls__button--prev">
+                    <svg class="arrow-diagonal" viewBox="0 0 26.74 26.9">
+                      <path d="M.45,1H25.74V26.49M1,25.77,25.74,1"></path>
+                    </svg>
+                  </button>
+                  <button type="button" class="slider__controls__button slider__controls__button--next">
+                    <svg class="arrow-diagonal" viewBox="0 0 26.74 26.9">
+                      <path d="M.45,1H25.74V26.49M1,25.77,25.74,1"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="years">
+            <div class="years__wrapper">
+              <div class="years__mark">
+                <span>1983</span>
+              </div>
+              <div class="years__mark">
+                <span>1984</span>
+              </div>
+              <div class="years__mark">
+                <span>1985</span>
+              </div>
+              <div class="years__mark">
+                <span>1986</span>
+              </div>
+              <div class="years__mark">
+                <span>1987</span>
+              </div>
+              <div class="years__mark is-marked is-active" data-id="0">
+                <span>1988</span>
+              </div>
+              <div class="years__mark">
+                <span>1989</span>
+              </div>
+              <div class="years__mark is-marked" data-id="1">
+                <span>1990</span>
+              </div>
+              <div class="years__mark">
+                <span>1991</span>
+              </div>
+              <div class="years__mark">
+                <span>1992</span>
+              </div>
+              <div class="years__mark">
+                <span>1993</span>
+              </div>
+              <div class="years__mark">
+                <span>1994</span>
+              </div>
+              <div class="years__mark is-marked" data-id="2">
+                <span>1995</span>
+              </div>
+              <div class="years__mark is-marked" data-id="3">
+                <span>1996</span>
+              </div>
+              <div class="years__mark">
+                <span>1997</span>
+              </div>
+              <div class="years__mark">
+                <span>1998</span>
+              </div>
+              <div class="years__mark is-marked" data-id="4">
+                <span>1999</span>
+              </div>
+              <div class="years__mark">
+                <span>2000</span>
+              </div>
+              <div class="years__mark">
+                <span>2001</span>
+              </div>
+              <div class="years__mark">
+                <span>2002</span>
+              </div>
+              <div class="years__mark">
+                <span>2003</span>
+              </div>
+              <div class="years__mark">
+                <span>2004</span>
+              </div>
+              <div class="years__mark">
+                <span>2005</span>
+              </div>
+              <div class="years__mark">
+                <span>2006</span>
+              </div>
+              <div class="years__mark">
+                <span>2007</span>
+              </div>
+              <div class="years__mark">
+                <span>2008</span>
+              </div>
+              <div class="years__mark">
+                <span>2009</span>
+              </div>
+              <div class="years__mark is-marked" data-id="5">
+                <span>2010</span>
+              </div>
+              <div class="years__mark">
+                <span>2011</span>
+              </div>
+              <div class="years__mark">
+                <span>2012</span>
+              </div>
+              <div class="years__mark">
+                <span>2013</span>
+              </div>
+              <div class="years__mark">
+                <span>2014</span>
+              </div>
+              <div class="years__mark is-marked" data-id="6">
+                <span>2015</span>
+              </div>
+              <div class="years__mark">
+                <span>2016</span>
+              </div>
+              <div class="years__mark">
+                <span>2017</span>
+              </div>
+              <div class="years__mark is-marked" data-id="7">
+                <span>2018</span>
+              </div>
+              <div class="years__mark is-marked" data-id="8">
+                <span>2019</span>
+              </div>
+              <div class="years__mark is-marked" data-id="9">
+                <span>2020</span>
+              </div>
+              <div class="years__mark is-marked" data-id="10">
+                <span>2021</span>
+              </div>
+              <div class="years__mark">
+                <span>2022</span>
+              </div>
+              <div class="years__mark">
+                <span>2023</span>
+              </div>
+              <div class="years__mark">
+                <span>2024</span>
+              </div>
+              <div class="years__mark">
+                <span>2025</span>
+              </div>
+              <div class="years__mark">
+                <span>2026</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

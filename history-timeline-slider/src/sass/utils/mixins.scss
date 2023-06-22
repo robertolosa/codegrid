@@ -1,0 +1,189 @@
+$fix-mqs: false !default;
+
+@mixin respond-min($width) {
+  /* If we're outputting for a fixed media query set...*/
+  @if $fix-mqs {
+    /* ...and if we should apply these rules...*/
+    @if $fix-mqs >= $width {
+      /* ...output the content the user gave us.*/
+      @content;
+    }
+  } @else {
+    /* Otherwise, output it using a regular media query*/
+    @media only screen and (min-width: $width) {
+      @content;
+    }
+  }
+}
+
+@mixin respond-max($width) {
+  /* If we're outputting for a fixed media query set...*/
+  @if $fix-mqs {
+    /* ...and if we should apply these rules...*/
+    @if $fix-mqs >= $width {
+      /* ...output the content the user gave us.*/
+      @content;
+    }
+  } @else {
+    /* Otherwise, output it using a regular media query*/
+    @media only screen and (max-width: $width) {
+      @content;
+    }
+  }
+}
+
+@mixin hover() {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin transition($transitions...) {
+  $unfoldedTransitions: ();
+
+  @each $transition in $transitions {
+    $unfoldedTransitions: append($unfoldedTransitions, unfoldTransition($transition), comma);
+  }
+
+  transition: $unfoldedTransitions;
+}
+
+@function unfoldTransition($transition) {
+  // Default values
+  $property: all;
+  $delay: 0s;
+  $duration: var(--transition-duration);
+  $easing: var(--transition-easing); // Browser default is ease, which is what we want
+  $defaultProperties: ($property, $duration, $delay, $easing);
+
+  // Grab transition properties if they exist
+  $unfoldedTransition: ();
+
+  @for $i from 1 through length($defaultProperties) {
+    $p: null;
+
+    @if $i <= length($transition) {
+      $p: nth($transition, $i);
+    } @else {
+      $p: nth($defaultProperties, $i);
+    }
+
+    $unfoldedTransition: append($unfoldedTransition, $p);
+  }
+
+  @return $unfoldedTransition;
+}
+
+@mixin prop($prop: 100%) {
+  background-color: var(--color-placeholder);
+  height: 0;
+  overflow: hidden;
+  padding-bottom: $prop;
+  position: relative;
+}
+
+@function z($name) {
+  @if index($z-indexes, $name) {
+    @return (length($z-indexes) - index($z-indexes, $name)) + 10;
+  } @else {
+    @warn 'There is no item "#{name} in this list; Choose one of: #{$z-indexes}';
+
+    @return null;
+  }
+}
+
+@mixin contain {
+  display: block;
+  height: 100%;
+  left: 0;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+@mixin cover {
+  display: block;
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+@mixin expand-area {
+  content: "";
+  display: block;
+  height: 200%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 200%;
+}
+
+@mixin hidden {
+  backface-visibility: hidden;
+  opacity: 0;
+  visibility: hidden;
+}
+
+@mixin loading {
+  &:before {
+    animation: spin 1.7s linear infinite;
+    border: 2px solid var(--color-border);
+    border-top: 2px solid #000;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 35px;
+    margin: 0 auto;
+    width: 35px;
+
+    @include respond-min($s-tablet) {
+      height: 40px;
+      width: 40px;
+    }
+  }
+}
+
+@mixin loading-container {
+  position: relative;
+
+  &:before {
+    left: 50%;
+    position: absolute;
+    top: 20px;
+    transform: translateX(-50%);
+    z-index: 5;
+
+    @include respond-min($s-tablet) {
+      top: 25px;
+    }
+
+    @include respond-min($wide) {
+      top: 30px;
+    }
+  }
+
+  &:after {
+    background-color: rgba(255, 255, 255, 0.75);
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 4;
+  }
+}
+
+@mixin visible {
+  backface-visibility: visible;
+  opacity: 1;
+  visibility: visible;
+}

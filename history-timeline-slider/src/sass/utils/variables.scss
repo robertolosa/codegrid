@@ -1,0 +1,21 @@
+@import "./mixins";
+
+$xs-mobile: 400px;
+$mobile: 450px;
+$xs-tablet: 600px;
+$s-tablet: 768px;
+$l-tablet: 1024px;
+$medium: 1366px;
+$wide: 1536px;
+$wider: 1680px;
+$widest: 1920px;
+
+$z-indexes: ("scrollbar");
+
+:root {
+  --color-theme: #1c1f24;
+  --color-theme-rgb: 28, 31, 36;
+  --color-theme-inverse: #e3e0db;
+  --color-theme-inverse-rgb: 227, 224, 219;
+  --header-height: 100px;
+}

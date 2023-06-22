@@ -1,0 +1,57 @@
+.topbar {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  padding: 8px 16px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 40;
+
+  @media (min-width: 1024px) {
+    padding: 12px 28px;
+  }
+
+  a {
+    color: inherit;
+    display: block;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: -0.375px;
+    text-decoration: none;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+
+    @media (min-width: 1024px) {
+      font-size: 18px;
+      letter-spacing: -0.45px;
+    }
+
+    &:hover {
+      color: #018274;
+    }
+  }
+}
+
+.topbar__avatar {
+  border-radius: 50%;
+  height: 45px;
+  overflow: hidden;
+  position: relative;
+  width: 45px;
+
+  @media (min-width: 1024px) {
+    height: 54px;
+    width: 54px;
+  }
+
+  img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
+}

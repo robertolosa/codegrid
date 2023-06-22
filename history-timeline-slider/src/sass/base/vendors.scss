@@ -1,0 +1,19 @@
+@import "locomotive-scroll/src/locomotive-scroll.scss";
+@import "swiper/scss";
+@import "swiper/scss/effect-fade";
+@import "swiper/scss/keyboard";
+@import "swiper/scss/navigation";
+
+[data-scroll-container] {
+  html.has-scroll-smooth & {
+    overflow: hidden !important;
+  }
+}
+
+.c-scrollbar {
+  z-index: z("scrollbar");
+}
+
+.c-scrollbar_thumb {
+  opacity: 1;
+}
