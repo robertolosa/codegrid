@@ -1,0 +1,24 @@
+{
+  "name": "lines-to-content-layout-animation",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "parcel src/index.html --open",
+    "clean": "rm -rf dist/*",
+    "build:parcel": "parcel build src/index.html --no-content-hash --no-source-maps --public-url ./",
+    "build": "npm run clean && npm run build:parcel"
+  },
+  "author": "Roberto Losa",
+  "license": "ISC",
+  "dependencies": {
+    "gsap": "^3.11.3",
+    "imagesloaded": "^5.0.0",
+    "parcel": "^2.8.2"
+  },
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.8.2",
+    "@parcel/transformer-webmanifest": "^2.8.2",
+    "prettier": "^2.8.1",
+    "prettier-plugin-packagejson": "^2.3.0"
+  }
+}
