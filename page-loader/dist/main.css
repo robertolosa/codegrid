@@ -1,0 +1,284 @@
+/*!*************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/sass/main.scss ***!
+  \*************************************************************************************************************/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+small {
+  font-size: smaller; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html.js.lenis {
+  height: auto; }
+  html.js.lenis.lenis-smooth {
+    scroll-behavior: auto; }
+    html.js.lenis.lenis-smooth [data-lenis-prevent] {
+      overscroll-behavior: contain; }
+    html.js.lenis.lenis-smooth .lenis.lenis-stopped {
+      overflow: hidden; }
+  html.js.lenis.lenis-scrolling iframe {
+    pointer-events: none; }
+
+@font-face {
+  font-display: swap;
+  font-family: "GT America Extended";
+  font-style: normal;
+  font-weight: 500;
+  src: url(86369d5461bdd4aca232.woff2) format("woff2"), url(767e42accd62a23c9daf.woff) format("woff");
+  text-rendering: optimizeLegibility; }
+
+@font-face {
+  font-display: swap;
+  font-family: "Roslindale Deck Narrow";
+  font-style: normal;
+  font-weight: 400;
+  src: url(0b1bc4cc3ab9294cf90b.woff2) format("woff2"), url(91dc894322f232c46ba3.woff) format("woff");
+  text-rendering: optimizeLegibility; }
+
+@font-face {
+  font-display: swap;
+  font-family: "Roslindale Display Condensed";
+  font-style: normal;
+  font-weight: 300;
+  src: url(6eff9a25f1802472ee43.woff2) format("woff2"), url(9f62b77d4dbbfa48d555.woff) format("woff");
+  text-rendering: optimizeLegibility; }
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box; }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  /* prevent FOUC */
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden; }
+
+a {
+  color: inherit;
+  color: inherit;
+  outline: none;
+  text-decoration: none; }
+
+i,
+em {
+  font-style: italic; }
+
+button,
+input,
+select,
+textarea {
+  color: inherit;
+  font-family: inherit;
+  letter-spacing: inherit; }
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+  outline: none;
+  padding: 0; }
+
+img {
+  vertical-align: middle; }
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+  .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto; }
+
+.loader {
+  align-items: center;
+  background-color: #bdae8f;
+  bottom: 0;
+  color: #2d2926;
+  cursor: progress;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roslindale Deck Narrow", sans-serif;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  top: 0;
+  visibility: hidden;
+  width: 100%;
+  z-index: 10; }
+
+.loader__image {
+  overflow: hidden;
+  width: 16vw;
+  height: 22vw; }
+  .loader__image img {
+    display: block;
+    height: 100%;
+    width: 100%; }
+
+.loader__text {
+  font-size: 1.75vw;
+  letter-spacing: 0.01em;
+  line-height: 2.2vw;
+  margin-top: 1.5vw; }
+
+.loader__label {
+  font-family: "GT America Extended", sans-serif;
+  font-size: 0.73vw;
+  letter-spacing: 0.1em;
+  line-height: 1.1vw;
+  margin-top: 0.15vw;
+  text-transform: uppercase; }
+
+.loader__counter {
+  bottom: 3vw;
+  display: flex;
+  font-family: "Roslindale Display Condensed", sans-serif;
+  font-size: 5.17vw;
+  line-height: 5.5vw;
+  overflow: hidden;
+  position: absolute;
+  right: 4vw; }
+  .loader__counter:after {
+    content: "%"; }
+
