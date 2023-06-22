@@ -19,6 +19,7 @@
 }
 
   * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
@@ -33,30 +34,65 @@
     overflow: hidden;
   }
   
-  .back {
+  .topbar {
     align-items: center;
     color: #fff;
     display: flex;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    left: 15px;
-    line-height: 1;
-    position: absolute;
-    text-decoration: none;
-    top: 5px;
-    z-index: 5;
-  }
-  
-  .back svg {
-    flex-shrink: 0;
-    height: 50px;
-    margin-right: 15px;
-    transform: rotate(-180deg);
-    width: 50px;
-  }
+    justify-content: space-between;
+    left: 0;
+    padding: 8px 16px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 40;
+}
 
-  .back svg path {
-    fill: #fff;
-  }
+.topbar a {
+    color: inherit;
+    display: block;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: -0.375px;
+    text-decoration: none;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.topbar a:hover {
+    color: #018274;
+}
+
+.topbar__avatar {
+    border-radius: 50%;
+    height: 45px;
+    overflow: hidden;
+    position: relative;
+    width: 45px;
+}
+
+.topbar__avatar img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .topbar {
+        padding: 12px 28px;
+    }
+
+    .topbar a {
+        font-size: 18px;
+        letter-spacing: -0.45px;
+    }
+
+    .topbar__avatar {
+        height: 54px;
+        width: 54px;
+    }
+}
   
   nav {
     align-items: center;
