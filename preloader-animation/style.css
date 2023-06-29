@@ -1,3 +1,36 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Carpenter';
+  src: url('./assets/Carpenter-regular.woff2') format('woff2'),
+       url('./assets/Carpenter-regular.woff') format('woff');
+           font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Neue Montreal';
+  src: url('./assets/NeueMontreal-regular.woff2') format('woff2'),
+       url('./assets/NeueMontreal-regular.woff') format('woff');
+           font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: #a0a0a0;
+  height: 100vh;
+  overflow: hidden;
+  width: 100vw;
+}
+
 .topbar {
   align-items: center;
   display: flex;
@@ -55,4 +88,83 @@
       height: 54px;
       width: 54px;
   }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  position: fixed;
+  top: 0;
+  width: 100%; 
+}
+
+nav div {
+  display: flex;
+  gap: 10em;
+  padding: 1em;
+}
+
+nav div a {
+  color: #000;
+  font-family: "Neue Montreal", sans-serif;
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+  width: 100%;
+}
+
+.header .h1 {
+  color: #1a1a1a;
+  font-family: "Carpenter", serif;
+  font-size: 32vw;
+  line-height: 1.125;
+  position: relative;
+}
+
+.hero {
+  border: 4px solid #1a1a1a;
+  border-radius: 10px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  width: calc(100vw - 4em);
+}
+
+.hero img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.overlay {
+  display: flex;
+  height: 100vh;
+  position: fixed;
+  width: 100vw;
+  z-index: 2;
+}
+
+.bar {
+  background-color: #1a1a1a;
+  height: 105vh;
+  width: 10vw;
+}
+
+.counter {
+  align-items: flex-end;
+  color: #bcbcc4;
+  font-family: "Carpenter", serif;
+  font-size: 20vw;
+  display: flex;
+  height: 100%;
+  justify-content: flex-end;
+  padding: 0 2em 0 4em;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
 }
