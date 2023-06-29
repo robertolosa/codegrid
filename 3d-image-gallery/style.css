@@ -1,0 +1,251 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.topbar {
+    align-items: center;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    padding: 8px 16px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 40;
+}
+
+.topbar a {
+    color: inherit;
+    display: block;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: -0.375px;
+    text-decoration: none;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.topbar a:hover {
+    color: #018274;
+}
+
+.topbar__avatar {
+    border-radius: 50%;
+    height: 45px;
+    overflow: hidden;
+    position: relative;
+    width: 45px;
+}
+
+.topbar__avatar img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .topbar {
+        padding: 12px 28px;
+    }
+
+    .topbar a {
+        font-size: 18px;
+        letter-spacing: -0.45px;
+    }
+
+    .topbar__avatar {
+        height: 54px;
+        width: 54px;
+    }
+}
+
+.gallery {
+    background-color: #000;
+    height: 100vh;
+    perspective: 2000px;
+    position: absolute;
+    transform-style: preserve-3d;
+    width: 100vw;
+}
+
+.block {
+    background-color: #c0c0c0;
+    height: 100px;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform: translateZ(1750px);
+    width: 200px;
+}
+
+.block-1 {
+    background: url("images/1.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+    left: 55%;
+    top: 30%;
+}
+
+.block-2 {
+    background: url("images/2.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+    left: 25%;
+    top: 20%;
+}
+
+.block-3 {
+    background: url("images/3.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+    left: 10%;
+    top: 50%;
+}
+
+.block-4 {
+    background: url("images/4.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+    left: 40%;
+    top: 60%;
+}
+
+.block-5 {
+    background: url("images/5.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+    left: 30%;
+    top: 30%;
+}
+
+.block-6 {
+    background: url("images/6.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+    left: 60%;
+    top: 60%;
+}
+
+.block-7 {
+    background: url("images/7.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+    left: 50%;
+    top: 20%;
+}
+
+.block-8 {
+    background: url("images/8.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+    left: 10%;
+    top: 60%;
+}
+
+.block-9 {
+    background: url("images/9.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+    left: 40%;
+    top: 20%;
+}
+
+.block-10 {
+    background: url("images/10.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+    left: 60%;
+    top: 40%;
+}
+
+.block-11 {
+    background: url("images/11.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+    left: 25%;
+    top: 60%;
+}
+
+.block-12 {
+    background: url("images/12.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+    left: 30%;
+    top: 50%;
+}
+
+.block-13 {
+    background: url("images/13.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+    left: 25%;
+    top: 60%;
+}
+
+.block-14 {
+    background: url("images/14.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+    left: 25%;
+    top: 25%;
+}
+
+.block-15 {
+    background: url("images/15.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+    left: 10%;
+    top: 50%;
+}
+
+.block-16 {
+    background: url("images/16.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+    left: 40%;
+    top: 60%;
+}
+
+.block-17 {
+    background: url("images/17.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+    left: 30%;
+    top: 30%;
+}
+
+.block-18 {
+    background: url("images/18.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+    left: 60%;
+    top: 60%;
+}
+
+.block-19 {
+    background: url("images/19.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+    left: 50%;
+    top: 20%;
+}
+
+.block-20 {
+    background: url("images/20.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+    left: 10%;
+    top: 60%;
+}
+
+.block-21 {
+    background: url("images/21.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+    left: 40%;
+    top: 20%;
+}
+
+.block-22 {
+    background: url("images/22.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+    left: 60%;
+    top: 40%;
+}
+
+.block-23 {
+    background: url("images/23.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+    left: 25%;
+    top: 60%;
+}
+
+.block-24 {
+    background: url("images/24.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+    left: 30%;
+    top: 50%;
+}
