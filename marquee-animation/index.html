@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Roberto Losa - Marquee Animation</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png?v=1" />
+        <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png?v=1" />
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png?v=1" />
+        <link rel="manifest" href="../site.webmanifest.json?v=1" />
+        <link rel="mask-icon" href="../safari-pinned-tab.svg?v=1" color="#000000" />
+        <link rel="shortcut icon" href="../favicon.ico?v=1" />
+        <meta name="msapplication-TileColor" content="#000000" />
+        <meta name="theme-color" content="#000000" />
+        <link rel="stylesheet" href="style.css" /> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>   
+    </head>
+    <body>
+        <div class="topbar">
+            <a href="/" class="topbar__back" title="Back">Back</a>
+            <a href="https://robylosa.dev" class="topbar__avatar" title="Home">
+                <img src="avatar.jpg" alt="Roberto Losa" width="56" height="56" />
+            </a>
+        </div>
+       <section class="spacer"></section>
+       <section class="marquee">
+        <div class="marquee__inner">
+            <div class="marquee__part">
+                modern creative studio
+            </div>
+            <div class="marquee__part">
+                modern creative studio
+            </div>
+            <div class="marquee__part">
+                modern creative studio
+            </div>
+            <div class="marquee__part">
+                modern creative studio
+            </div>
+            <div class="marquee__part">
+                modern creative studio
+            </div>
+            <div class="marquee__part">
+                modern creative studio
+            </div>
+        </div>
+       </section>
+       <script>
+        let tween = gsap.to(".marquee__part", {
+            xPercent: -100,
+            repeat: -1,
+            duration: 5,
+            ease: "linear"
+        }).totalProgress(.5);
+
+        gsap.set(".marquee__inner", { xPercent: -50 });
+       </script>
+    </body>
+</html>
